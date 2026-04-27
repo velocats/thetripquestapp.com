@@ -460,3 +460,40 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   .hero-actions .btn, .centered-actions .btn { width: 100%; }
   .footer-inner, .footer-bottom { flex-direction: column; align-items: flex-start; }
 }
+
+
+.feedback-layout { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr); gap: 18px; align-items: start; }
+.feedback-intro { position: sticky; top: 92px; }
+.small-note, .form-help { color: var(--softer); font-size: 0.95rem; line-height: 1.55; }
+.feedback-form { display: grid; gap: 16px; }
+.feedback-form label { display: grid; gap: 8px; color: var(--text); font-weight: 900; }
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+  width: 100%;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 18px;
+  background: rgba(7, 24, 48, 0.70);
+  color: var(--text);
+  padding: 14px 15px;
+  font: inherit;
+  outline: none;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+}
+.feedback-form textarea { resize: vertical; min-height: 120px; }
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder { color: rgba(223, 236, 255, 0.56); }
+.feedback-form input:focus,
+.feedback-form select:focus,
+.feedback-form textarea:focus {
+  border-color: rgba(255, 194, 61, 0.72);
+  box-shadow: 0 0 0 4px rgba(255, 194, 61, 0.12), inset 0 1px 0 rgba(255,255,255,0.06);
+}
+.form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 1040px) {
+  .feedback-layout { grid-template-columns: 1fr; }
+  .feedback-intro { position: static; }
+}
+@media (max-width: 720px) {
+  .form-row { grid-template-columns: 1fr; }
+}

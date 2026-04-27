@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>TripQuest Feedback & Content Requests | thetripquestapp.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Send TripQuest feedback, request question changes, suggest new content, or share ideas for future packs." />
+  <link rel="canonical" href="https://thetripquestapp.com/feedback.html" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="assets/tripquest-icon.png" />
+</head>
+<body>
+  <div class="sky-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/tripquest-icon.png" alt="TripQuest icon" />
+        <span>TripQuest</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <nav class="nav" id="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#games">Games</a>
+        <a href="index.html#packs">Packs</a>
+        <a href="support.html">Support</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="btn nav-cta" href="https://apps.apple.com/app/id0000000000" target="_blank" rel="noopener">App Store placeholder</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero small-hero section">
+      <div class="wrap">
+        <p class="eyebrow">Feedback & content ideas</p>
+        <h1>Help make TripQuest better.</h1>
+        <p>Found a question that needs a fix? Have an idea for a new pack, game mode, or road-trip prompt? Send it over and it will go straight to the TripQuest inbox.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap feedback-layout">
+        <article class="content-card glass-panel feedback-intro">
+          <h2>What you can send</h2>
+          <ul class="note-list">
+            <li>Corrections to questions, answers, or explanations</li>
+            <li>Ideas for new trivia, true or false, animal clues, or stories</li>
+            <li>Requests for future content packs</li>
+            <li>Suggestions from a road trip, camping weekend, or game night</li>
+            <li>General feedback, bugs, or things that felt confusing</li>
+          </ul>
+          <p class="small-note">This form uses your email app to send the message to <a href="mailto:thetripquestapp@gmail.com">thetripquestapp@gmail.com</a>.</p>
+        </article>
+
+        <article class="content-card glass-panel">
+          <form class="feedback-form" id="feedbackForm">
+            <label>
+              What is this about?
+              <select name="topic" required>
+                <option value="General feedback">General feedback</option>
+                <option value="Question or content correction">Question or content correction</option>
+                <option value="New question or content idea">New question or content idea</option>
+                <option value="New pack request">New pack request</option>
+                <option value="Bug report">Bug report</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+
+            <div class="form-row">
+              <label>
+                Your name
+                <input name="name" type="text" autocomplete="name" placeholder="Optional" />
+              </label>
+              <label>
+                Your email
+                <input name="replyEmail" type="email" autocomplete="email" placeholder="Optional" />
+              </label>
+            </div>
+
+            <label>
+              Pack, game mode, or screen
+              <input name="area" type="text" placeholder="Example: Space Trivia, Camping, Trip Mode" />
+            </label>
+
+            <label>
+              Your message
+              <textarea name="message" rows="8" required placeholder="Tell me what should be fixed, added, changed, or considered for a future TripQuest update."></textarea>
+            </label>
+
+            <label>
+              Suggested wording or new content
+              <textarea name="suggestedContent" rows="5" placeholder="Optional: paste a question, answer, explanation, pack idea, or story prompt."></textarea>
+            </label>
+
+            <button class="btn primary large" type="submit">Open email to send feedback</button>
+            <p class="form-help">Your message will open in your email app before it is sent.</p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="brand footer-brand" href="index.html">
+        <img src="assets/tripquest-icon.png" alt="TripQuest icon" />
+        <span>TripQuest</span>
+      </a>
+      <nav class="footer-nav">
+        <a href="https://thetripquestapp.com/">thetripquestapp.com</a>
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="release-notes.html">Release Notes</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const topic = data.get('topic') || 'TripQuest feedback';
+      const lines = [
+        'Topic: ' + topic,
+        'Name: ' + (data.get('name') || 'Not provided'),
+        'Reply email: ' + (data.get('replyEmail') || 'Not provided'),
+        'Pack / mode / screen: ' + (data.get('area') || 'Not specified'),
+        '',
+        'Message:',
+        data.get('message') || '',
+        '',
+        'Suggested wording or new content:',
+        data.get('suggestedContent') || 'None provided'
+      ];
+      const subject = encodeURIComponent('TripQuest: ' + topic);
+      const body = encodeURIComponent(lines.join('
+'));
+      window.location.href = 'mailto:thetripquestapp@gmail.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</body>
+</html>
