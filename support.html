@@ -2,25 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>TripQuest Support</title>
+  <title>TripQuest Support | thetripquestapp.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Get help with TripQuest, the family-friendly iPhone road trip game app." />
+  <meta name="description" content="Get help with TripQuest, the family-friendly iPhone road trip game app for families and friends." />
+  <link rel="canonical" href="https://thetripquestapp.com/support.html" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/tripquest-icon.png" />
 </head>
 <body>
+  <div class="sky-noise" aria-hidden="true"></div>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
         <img src="assets/tripquest-icon.png" alt="TripQuest icon" />
         <span>TripQuest</span>
       </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html#features">Features</a>
-        <a href="index.html#trip-mode">Trip Mode</a>
-        <a href="index.html#faq">FAQ</a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <nav class="nav" id="siteNav" aria-label="Primary">
+        <a href="index.html#games">Games</a>
+        <a href="index.html#packs">Packs</a>
         <a href="privacy.html">Privacy</a>
         <a href="release-notes.html">Release Notes</a>
+        <a class="btn nav-cta" href="https://apps.apple.com/app/id0000000000" target="_blank" rel="noopener">App Store placeholder</a>
       </nav>
     </div>
   </header>
@@ -30,7 +33,7 @@
       <div class="wrap">
         <p class="eyebrow">Support</p>
         <h1>Need help with TripQuest?</h1>
-        <p>Use this page for app support, common questions, and contact details you can update before publishing.</p>
+        <p>Questions, bug reports, purchase restore issues, or feedback for the next version can start here.</p>
       </div>
     </section>
 
@@ -38,17 +41,17 @@
       <div class="wrap support-grid">
         <article class="content-card glass-panel">
           <h2>Contact</h2>
-          <p>Email: <a href="mailto:support@tripquestapp.com">support@tripquestapp.com</a></p>
-          <p>Replace this address with your real TripQuest support email before publishing.</p>
+          <p>Email: <a href="mailto:support@thetripquestapp.com">support@thetripquestapp.com</a></p>
+          <p>Replace this address with your final support email before publishing if needed.</p>
         </article>
 
         <article class="content-card glass-panel">
           <h2>Common help topics</h2>
           <ul class="note-list">
-            <li>Questions about Trip Mode or scoring</li>
-            <li>Help restoring purchases or packs</li>
-            <li>General feedback and bug reports</li>
-            <li>Compatibility questions for iPhone</li>
+            <li>Questions about Trip Mode, players, rounds, or scoring</li>
+            <li>Help restoring purchases or unlocked packs</li>
+            <li>Feedback on content packs or game modes</li>
+            <li>Bug reports from a road trip or group play session</li>
           </ul>
         </article>
       </div>
@@ -57,8 +60,8 @@
     <section class="section alt-section">
       <div class="wrap">
         <article class="content-card glass-panel">
-          <h2>Suggested support notes</h2>
-          <p>Add any publishing-specific details here, such as supported iPhone versions, how to restore purchases, or the best email subject line for faster help.</p>
+          <h2>App Store link</h2>
+          <p>The App Store buttons currently use a placeholder link until TripQuest is live. Update the placeholder URL after the App Store page is created.</p>
         </article>
       </div>
     </section>
@@ -71,11 +74,13 @@
         <span>TripQuest</span>
       </a>
       <nav class="footer-nav">
+        <a href="https://thetripquestapp.com/">thetripquestapp.com</a>
         <a href="index.html">Home</a>
         <a href="privacy.html">Privacy</a>
         <a href="release-notes.html">Release Notes</a>
       </nav>
     </div>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
