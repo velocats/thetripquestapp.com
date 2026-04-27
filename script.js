@@ -19,4 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
+  const params = new URLSearchParams(window.location.search);
+  const successEl = document.getElementById("formSuccess");
+  if (successEl && params.get("sent") === "1") {
+    successEl.hidden = false;
+    successEl.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
 });

@@ -6,8 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Send TripQuest feedback, request question changes, suggest new content, or share ideas for future packs." />
   <link rel="canonical" href="https://thetripquestapp.com/feedback.html" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="assets/tripquest-icon.png" />
 </head>
 <body>
   <div class="sky-noise" aria-hidden="true"></div>
@@ -54,7 +57,12 @@
         </article>
 
         <article class="content-card glass-panel">
-          <form class="feedback-form" id="feedbackForm">
+          <form class="feedback-form" id="feedbackForm" action="https://formsubmit.co/thetripquestapp@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New TripQuest feedback or content request" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://thetripquestapp.com/feedback.html?sent=1" />
+
             <label>
               What is this about?
               <select name="topic" required>
@@ -74,7 +82,7 @@
               </label>
               <label>
                 Your email
-                <input name="replyEmail" type="email" autocomplete="email" placeholder="Optional" />
+                <input name="email" type="email" autocomplete="email" placeholder="Optional, if you want a reply" />
               </label>
             </div>
 
@@ -93,8 +101,9 @@
               <textarea name="suggestedContent" rows="5" placeholder="Optional: paste a question, answer, explanation, pack idea, or story prompt."></textarea>
             </label>
 
-            <button class="btn primary large" type="submit">Open email to send feedback</button>
-            <p class="form-help">Your message will open in your email app before it is sent.</p>
+            <button class="btn primary large" type="submit">Send feedback</button>
+            <p class="form-help">This sends directly to the TripQuest inbox. The first live submission may require a one-time FormSubmit email confirmation.</p>
+            <p class="form-success" id="formSuccess" hidden>Thanks — your message was sent.</p>
           </form>
         </article>
       </div>
