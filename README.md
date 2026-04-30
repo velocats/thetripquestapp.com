@@ -2,22 +2,16 @@
 
 Static marketing website for TripQuest, a family-friendly iPhone game app for road trips, group play, and casual get-togethers.
 
-## Placeholder to update before launch
+## App Store URL
 
-The App Store URL currently uses:
-
-https://apps.apple.com/app/id0000000000
-
-Replace it with the final App Store URL once TripQuest is published.
-
+https://apps.apple.com/us/app/tripquest-travel-games/id6760669535
 
 Contact and feedback email: thetripquestapp@gmail.com
 Feedback page: feedback.html
 
-
 ## Feedback form
 
-`feedback.html` posts to FormSubmit at `thetripquestapp@gmail.com` so visitors can send feedback without opening their local email client. FormSubmit may send a one-time confirmation email the first time the live form is submitted from the deployed domain.
+`feedback.html` posts to FormSubmit at `thetripquestapp@gmail.com` so visitors can send feedback without opening their local email client. The feedback form sends messages to the TripQuest inbox.
 
 ## Icon
 
