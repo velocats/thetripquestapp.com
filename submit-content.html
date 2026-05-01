@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Submit Content for TripQuest | thetripquestapp.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Submit family-friendly TripQuest questions, prompts, animal clues, stories, and road trip game ideas for future review." />
+  <link rel="canonical" href="https://thetripquestapp.com/submit-content.html" />
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="sky-noise" aria-hidden="true"></div>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/tripquest-icon.png" alt="TripQuest icon" />
+        <span>TripQuest</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <nav class="nav" id="siteNav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="index.html#games">Games</a>
+        <a href="index.html#packs">Packs</a>
+        <a href="support.html">Support</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="submit-content.html">Submit Content</a>
+        <a href="privacy.html">Privacy</a>
+        <a class="btn nav-cta" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener">Download on the App Store</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero small-hero section">
+      <div class="wrap">
+        <p class="eyebrow">Community content ideas</p>
+        <h1>Submit a TripQuest question or game idea.</h1>
+        <p>Share a family-friendly road trip prompt for review. Choose a mode below and the form will ask for the exact pieces needed for that type of TripQuest content.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap feedback-layout">
+        <article class="content-card glass-panel feedback-intro">
+          <h2>Before you send it</h2>
+          <ul class="note-list">
+            <li>Please submit original, family-friendly content only.</li>
+            <li>Do not copy questions from other apps, games, books, websites, or trivia decks.</li>
+            <li>Submissions may be edited, adapted, declined, or considered for future TripQuest content.</li>
+            <li>Credit is optional. If included, TripQuest may show your first name and last initial only.</li>
+          </ul>
+          <p class="small-note">This form sends submissions to <a href="mailto:thetripquestapp@gmail.com">thetripquestapp@gmail.com</a>.</p>
+        </article>
+
+        <article class="content-card glass-panel">
+          <form class="feedback-form content-submit-form" id="contentSubmitForm" action="https://formsubmit.co/thetripquestapp@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New TripQuest content submission" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://thetripquestapp.com/submit-content.html?sent=1" />
+
+            <div class="form-row">
+              <label>
+                First name for credit <span class="optional-label">optional</span>
+                <input name="firstName" type="text" autocomplete="given-name" placeholder="Example: Mia or De Silva" />
+              </label>
+              <label>
+                Last initial for credit <span class="optional-label">optional</span>
+                <input name="lastInitial" type="text" autocomplete="family-name" inputmode="text" maxlength="1" pattern="[A-Za-z]" placeholder="Example: S" title="Use one letter only." />
+              </label>
+            </div>
+
+            <label>
+              Your email <span class="optional-label">optional, if you want a reply</span>
+              <input name="email" type="email" autocomplete="email" placeholder="name@example.com" />
+            </label>
+
+            <label>
+              Game mode
+              <select name="mode" id="modeSelect" required>
+                <option value="">Choose a mode</option>
+                <option value="Trivia">Trivia</option>
+                <option value="Would You Rather">Would You Rather</option>
+                <option value="True or False">True or False</option>
+                <option value="Just for Fun">Just for Fun</option>
+                <option value="Backseat Stories">Backseat Stories</option>
+                <option value="What Animal Am I?">What Animal Am I?</option>
+              </select>
+            </label>
+
+            <label>
+              Suggested pack or theme <span class="optional-label">optional</span>
+              <input name="suggestedTheme" type="text" placeholder="Example: Camping, Space, Food, Zoo, Core, future pack idea" />
+            </label>
+
+            <div class="mode-fields" data-mode="Trivia" hidden>
+              <h3>Trivia fields</h3>
+              <label>Question<input name="triviaQuestion" type="text" data-required /></label>
+              <div class="form-row">
+                <label>Choice A<input name="triviaChoiceA" type="text" data-required /></label>
+                <label>Choice B<input name="triviaChoiceB" type="text" data-required /></label>
+              </div>
+              <div class="form-row">
+                <label>Choice C<input name="triviaChoiceC" type="text" data-required /></label>
+                <label>Choice D<input name="triviaChoiceD" type="text" data-required /></label>
+              </div>
+              <label>Correct answer
+                <select name="triviaCorrectAnswer" data-required>
+                  <option value="">Choose the correct answer</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="C">C</option>
+                  <option value="D">D</option>
+                </select>
+              </label>
+              <label>Explanation<textarea name="triviaExplanation" rows="4" data-required placeholder="Add a short, fun explanation that works when read aloud."></textarea></label>
+            </div>
+
+            <div class="mode-fields" data-mode="Would You Rather" hidden>
+              <h3>Would You Rather fields</h3>
+              <div class="form-row">
+                <label>Choice 1<input name="wyrChoice1" type="text" data-required placeholder="Would you rather..." /></label>
+                <label>Choice 2<input name="wyrChoice2" type="text" data-required placeholder="Or..." /></label>
+              </div>
+              <label>Why this would be fun in the car<textarea name="wyrNotes" rows="3" placeholder="Optional: add context, theme, or why it starts a good debate."></textarea></label>
+            </div>
+
+            <div class="mode-fields" data-mode="True or False" hidden>
+              <h3>True or False fields</h3>
+              <label>Statement<input name="tfStatement" type="text" data-required placeholder="Example: True or false: ..." /></label>
+              <label>Answer
+                <select name="tfAnswer" data-required>
+                  <option value="">Choose the answer</option>
+                  <option value="True">True</option>
+                  <option value="False">False</option>
+                </select>
+              </label>
+              <label>Explanation<textarea name="tfExplanation" rows="4" data-required placeholder="Explain why it is true or false in a fun, read-aloud way."></textarea></label>
+            </div>
+
+            <div class="mode-fields" data-mode="Just for Fun" hidden>
+              <h3>Just for Fun fields</h3>
+              <label>Prompt or question<input name="jffPrompt" type="text" data-required placeholder="Example: Name the weirdest snack to eat in a car." /></label>
+              <label>Suggested answer, reveal, or response<textarea name="jffResponse" rows="4" data-required placeholder="Write N/A if there is no single answer, or explain how players should respond."></textarea></label>
+            </div>
+
+            <div class="mode-fields" data-mode="Backseat Stories" hidden>
+              <h3>Backseat Stories fields</h3>
+              <label>Story title<input name="storyTitle" type="text" data-required /></label>
+              <label>Blanks / slots needed<textarea name="storySlots" rows="4" data-required placeholder="Example: a name, an adjective, a food, an animal sound, a number..."></textarea></label>
+              <label>Story text<textarea name="storyText" rows="7" data-required placeholder="Write the story and mark where the blanks should go."></textarea></label>
+            </div>
+
+            <div class="mode-fields" data-mode="What Animal Am I?" hidden>
+              <h3>What Animal Am I? fields</h3>
+              <label>Animal<input name="animalName" type="text" data-required /></label>
+              <label>Clue 1<input name="animalClue1" type="text" data-required /></label>
+              <label>Clue 2<input name="animalClue2" type="text" data-required /></label>
+              <label>Clue 3<input name="animalClue3" type="text" data-required /></label>
+              <label>Clue 4<input name="animalClue4" type="text" data-required /></label>
+              <label>Clue 5<input name="animalClue5" type="text" data-required /></label>
+              <label>Fun fact<textarea name="animalFunFact" rows="4" data-required placeholder="Add a short, surprising fact about the animal."></textarea></label>
+            </div>
+
+            <label>
+              Extra notes <span class="optional-label">optional</span>
+              <textarea name="extraNotes" rows="4" placeholder="Anything else I should know about this submission?"></textarea>
+            </label>
+
+            <div class="submission-terms">
+              <label class="check-label">
+                <input name="originalContent" type="checkbox" value="Yes" required />
+                <span>I created this content or have the right to share it.</span>
+              </label>
+              <label class="check-label">
+                <input name="familyFriendly" type="checkbox" value="Yes" required />
+                <span>This content is family-friendly and appropriate for TripQuest.</span>
+              </label>
+              <label class="check-label">
+                <input name="permissionToUse" type="checkbox" value="Yes" required />
+                <span>TripQuest may review, edit, adapt, publish, or decline this submission without compensation.</span>
+              </label>
+            </div>
+
+            <p class="form-help">Submitting an idea does not guarantee it will appear in the app. Please do not include private information, copied trivia, or anything inappropriate for families.</p>
+            <button class="btn primary large" type="submit">Submit content idea</button>
+            <p class="form-success" id="formSuccess" hidden>Thanks — your content idea was sent.</p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <a class="brand footer-brand" href="index.html">
+        <img src="assets/tripquest-icon.png" alt="TripQuest icon" />
+        <span>TripQuest</span>
+      </a>
+      <nav class="footer-nav">
+        <a href="https://thetripquestapp.com/">thetripquestapp.com</a>
+        <a href="index.html">Home</a>
+        <a href="support.html">Support</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="submit-content.html">Submit Content</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="release-notes.html">Release Notes</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      const modeSelect = document.getElementById('modeSelect');
+      const sections = Array.from(document.querySelectorAll('.mode-fields'));
+
+      function setSectionState(section, isActive) {
+        section.hidden = !isActive;
+        section.querySelectorAll('input, select, textarea').forEach(function (field) {
+          field.disabled = !isActive;
+          if (field.hasAttribute('data-required')) {
+            field.required = isActive;
+          }
+        });
+      }
+
+      function updateModeFields() {
+        const selected = modeSelect.value;
+        sections.forEach(function (section) {
+          setSectionState(section, section.dataset.mode === selected);
+        });
+      }
+
+      modeSelect.addEventListener('change', updateModeFields);
+      updateModeFields();
+
+      if (window.location.search.includes('sent=1')) {
+        const success = document.getElementById('formSuccess');
+        if (success) success.hidden = false;
+      }
+    }());
+  </script>
+</body>
+</html>
