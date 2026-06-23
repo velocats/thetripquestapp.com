@@ -55,7 +55,7 @@
             <li>Suggestions from a road trip, camping weekend, or game night</li>
             <li>General feedback, bugs, or things that felt confusing</li>
           </ul>
-          <p class="small-note">This form uses your email app to send the message to <a href="mailto:thetripquestapp@gmail.com">thetripquestapp@gmail.com</a>.</p>
+          <p class="small-note">This form sends feedback to <a href="mailto:thetripquestapp@gmail.com">thetripquestapp@gmail.com</a>.</p>
         </article>
 
         <article class="content-card glass-panel">
@@ -131,27 +131,12 @@
   </footer>
   <script src="script.js"></script>
   <script>
-    document.getElementById('feedbackForm').addEventListener('submit', function (event) {
-      event.preventDefault();
-      const data = new FormData(event.currentTarget);
-      const topic = data.get('topic') || 'TripQuest feedback';
-      const lines = [
-        'Topic: ' + topic,
-        'Name: ' + (data.get('name') || 'Not provided'),
-        'Reply email: ' + (data.get('replyEmail') || 'Not provided'),
-        'Pack / mode / screen: ' + (data.get('area') || 'Not specified'),
-        '',
-        'Message:',
-        data.get('message') || '',
-        '',
-        'Suggested wording or new content:',
-        data.get('suggestedContent') || 'None provided'
-      ];
-      const subject = encodeURIComponent('TripQuest: ' + topic);
-      const body = encodeURIComponent(lines.join('
-'));
-      window.location.href = 'mailto:thetripquestapp@gmail.com?subject=' + subject + '&body=' + body;
-    });
+    (function () {
+      if (window.location.search.includes('sent=1')) {
+        const success = document.getElementById('formSuccess');
+        if (success) success.hidden = false;
+      }
+    }());
   </script>
 </body>
 </html>
