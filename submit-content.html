@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <div class="sky-noise" aria-hidden="true"></div>
   <header class="site-header">
     <div class="wrap header-inner">
@@ -20,22 +21,22 @@
         <img src="assets/tripquest-icon.png" alt="TripQuest icon" />
         <span>TripQuest</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation"><span></span><span></span><span></span></button>
       <nav class="nav" id="siteNav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="index.html#games">Games</a>
         <a href="index.html#packs">Packs</a>
         <a href="support.html">Support</a>
         <a href="feedback.html">Feedback</a>
-        <a href="submit-content.html">Submit Content</a>
+        <a href="submit-content.html" aria-current="page">Submit Content</a>
         <a href="privacy.html">Privacy</a>
         <a href="release-notes.html">Release Notes</a>
-        <a class="btn nav-cta" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener">Download on the App Store</a>
+        <a class="btn nav-cta" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener" aria-label="Download TripQuest on the App Store, opens in a new tab">Download on the App Store</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="page-hero small-hero section submit-content-hero">
       <div class="wrap">
         <p class="eyebrow">Community content ideas</p>
@@ -58,7 +59,7 @@
         </article>
 
         <article class="content-card glass-panel app-submit-card">
-          <form class="feedback-form content-submit-form app-style-submit-form" id="contentSubmitForm" action="https://formsubmit.co/thetripquestapp@gmail.com" method="POST">
+          <form class="feedback-form content-submit-form app-style-submit-form" id="contentSubmitForm" action="https://formsubmit.co/thetripquestapp@gmail.com" method="POST" data-formsubmit-ajax>
             <input type="hidden" name="_subject" value="New TripQuest content submission" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
@@ -81,7 +82,7 @@
             </label>
 
             <label>
-              Game mode
+              Game mode <span class="required-label">required</span>
               <select name="mode" id="modeSelect" required>
                 <option value="">Choose a mode</option>
                 <option value="Trivia">Trivia</option>
@@ -171,21 +172,22 @@
             <div class="submission-terms">
               <label class="check-label">
                 <input name="originalContent" type="checkbox" value="Yes" required />
-                <span>I created this content or have the right to share it.</span>
+                <span>I created this content or have the right to share it. <span class="required-label">required</span></span>
               </label>
               <label class="check-label">
                 <input name="familyFriendly" type="checkbox" value="Yes" required />
-                <span>This content is family-friendly and appropriate for TripQuest.</span>
+                <span>This content is family-friendly and appropriate for TripQuest. <span class="required-label">required</span></span>
               </label>
               <label class="check-label">
                 <input name="permissionToUse" type="checkbox" value="Yes" required />
-                <span>TripQuest may review, edit, adapt, publish, or decline this submission without compensation.</span>
+                <span>TripQuest may review, edit, adapt, publish, or decline this submission without compensation. <span class="required-label">required</span></span>
               </label>
             </div>
 
             <p class="form-help">Submitting an idea does not guarantee it will appear in TripQuest. Approved submissions may be edited and considered for the free <strong>Community Content</strong> pack. Please do not include private information, copied trivia, or anything inappropriate for families.</p>
             <button class="btn primary large" type="submit">Submit your idea</button>
-            <p class="form-success" id="formSuccess" hidden>Thanks — your content idea was sent.</p>
+            <p class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>Thanks — your content idea was sent.</p>
+            <p class="form-error" role="alert" hidden>Something blocked the send. Please email <a href="mailto:thetripquestapp@gmail.com">thetripquestapp@gmail.com</a> directly.</p>
           </form>
         </article>
       </div>
@@ -198,12 +200,12 @@
         <img src="assets/tripquest-icon.png" alt="TripQuest icon" />
         <span>TripQuest</span>
       </a>
-      <nav class="footer-nav">
+      <nav class="footer-nav" aria-label="Footer">
         <a href="https://thetripquestapp.com/">thetripquestapp.com</a>
         <a href="index.html">Home</a>
         <a href="support.html">Support</a>
         <a href="feedback.html">Feedback</a>
-        <a href="submit-content.html">Submit Content</a>
+        <a href="submit-content.html" aria-current="page">Submit Content</a>
         <a href="privacy.html">Privacy</a>
         <a href="release-notes.html">Release Notes</a>
       </nav>

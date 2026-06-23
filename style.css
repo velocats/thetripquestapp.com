@@ -8,12 +8,14 @@
   --gold: #ffc33d;
   --gold-dark: #18233a;
   --white: #f8fbff;
+  --text: #f8fbff;
   --soft: rgba(248, 251, 255, 0.78);
-  --softer: rgba(248, 251, 255, 0.62);
+  --softer: rgba(248, 251, 255, 0.74);
   --panel: rgba(21, 58, 104, 0.68);
   --panel-strong: rgba(17, 48, 92, 0.86);
   --stroke: rgba(255, 255, 255, 0.16);
   --gold-glow: rgba(255, 195, 61, 0.38);
+  --focus: #fff2a8;
   --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
   --radius-xl: 32px;
   --radius-lg: 24px;
@@ -39,6 +41,36 @@ body.nav-open { overflow: hidden; }
 a { color: inherit; }
 img { display: block; max-width: 100%; }
 button { font: inherit; }
+
+.skip-link {
+  position: fixed;
+  left: 17px;
+  top: 12px;
+  z-index: 100;
+  transform: translateY(-140%);
+  border-radius: 12px;
+  background: var(--focus);
+  color: #071c38;
+  padding: 12px 16px;
+  font-weight: 950;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+:focus {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 4px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
 
 .sky-noise {
   position: fixed;
@@ -107,7 +139,13 @@ button { font: inherit; }
   color: rgba(248,251,255,0.86);
   font-weight: 800;
 }
-.nav a:hover, .footer-nav a:hover { color: white; }
+.nav a:hover, .footer-nav a:hover,
+.nav a[aria-current="page"], .footer-nav a[aria-current="page"] { color: white; }
+.nav a[aria-current="page"], .footer-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.32em;
+}
 .nav-toggle {
   display: none;
   width: 48px;
@@ -489,6 +527,12 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   border-color: rgba(255, 194, 61, 0.72);
   box-shadow: 0 0 0 4px rgba(255, 194, 61, 0.12), inset 0 1px 0 rgba(255,255,255,0.06);
 }
+.feedback-form input:focus-visible,
+.feedback-form select:focus-visible,
+.feedback-form textarea:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
 .form-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 @media (max-width: 1040px) {
   .feedback-layout { grid-template-columns: 1fr; }
@@ -503,6 +547,16 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   margin-top: 12px;
   color: #9ff7d5;
   font-weight: 800;
+}
+.form-error {
+  margin-top: 12px;
+  color: #ffd6d6;
+  font-weight: 800;
+}
+.form-error a {
+  color: #ffffff;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.22em;
 }
 
 
@@ -535,6 +589,11 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
 .optional-label {
   color: var(--softer);
   font-weight: 800;
+  font-size: 0.92em;
+}
+.required-label {
+  color: var(--focus);
+  font-weight: 900;
   font-size: 0.92em;
 }
 .mode-fields {
@@ -625,6 +684,11 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   font-weight: 900;
   text-shadow: none;
 }
+.app-style-submit-form .required-label {
+  display: block;
+  color: #fff2a8;
+  text-shadow: none;
+}
 .app-style-submit-form input,
 .app-style-submit-form select,
 .app-style-submit-form textarea {
@@ -696,6 +760,11 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
   font-weight: 950;
   text-shadow: 0 2px 8px rgba(3, 24, 55, 0.24);
 }
+.app-style-submit-form .form-error {
+  color: #ffffff;
+  font-weight: 950;
+  text-shadow: 0 2px 8px rgba(3, 24, 55, 0.24);
+}
 @media (max-width: 720px) {
   .app-submit-card { border-radius: 28px; padding: 20px; }
   .app-style-submit-form .mode-fields { border-radius: 24px; padding: 18px; }
@@ -715,4 +784,24 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
 .app-style-submit-form .form-help strong {
   color: #ffffff;
   font-weight: 950;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+  .btn:hover,
+  .app-style-submit-form .btn.primary.large:hover {
+    transform: none;
+  }
+  .back-card,
+  .featured-shot {
+    transform: none;
+  }
 }

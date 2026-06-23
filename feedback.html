@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <div class="sky-noise" aria-hidden="true"></div>
   <header class="site-header">
     <div class="wrap header-inner">
@@ -20,22 +21,22 @@
         <img src="assets/tripquest-icon.png" alt="TripQuest icon" />
         <span>TripQuest</span>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation"><span></span><span></span><span></span></button>
       <nav class="nav" id="siteNav" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="index.html#games">Games</a>
         <a href="index.html#packs">Packs</a>
         <a href="support.html">Support</a>
-        <a href="feedback.html">Feedback</a>
+        <a href="feedback.html" aria-current="page">Feedback</a>
         <a href="submit-content.html">Submit Content</a>
         <a href="privacy.html">Privacy</a>
         <a href="release-notes.html">Release Notes</a>
-        <a class="btn nav-cta" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener">Download on the App Store</a>
+        <a class="btn nav-cta" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener" aria-label="Download TripQuest on the App Store, opens in a new tab">Download on the App Store</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <section class="page-hero small-hero section">
       <div class="wrap">
         <p class="eyebrow">Feedback & content ideas</p>
@@ -59,14 +60,14 @@
         </article>
 
         <article class="content-card glass-panel">
-          <form class="feedback-form" id="feedbackForm" action="https://formsubmit.co/thetripquestapp@gmail.com" method="POST">
+          <form class="feedback-form" id="feedbackForm" action="https://formsubmit.co/thetripquestapp@gmail.com" method="POST" data-formsubmit-ajax>
             <input type="hidden" name="_subject" value="New TripQuest feedback or content request" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_next" value="https://thetripquestapp.com/feedback.html?sent=1" />
 
             <label>
-              What is this about?
+              What is this about? <span class="required-label">required</span>
               <select name="topic" required>
                 <option value="General feedback">General feedback</option>
                 <option value="Question or content correction">Question or content correction</option>
@@ -94,7 +95,7 @@
             </label>
 
             <label>
-              Your message
+              Your message <span class="required-label">required</span>
               <textarea name="message" rows="8" required placeholder="Tell me what should be fixed, added, changed, or considered for a future TripQuest update."></textarea>
             </label>
 
@@ -105,7 +106,8 @@
 
             <button class="btn primary large" type="submit">Send feedback</button>
             <p class="form-help">This sends directly to the TripQuest inbox.</p>
-            <p class="form-success" id="formSuccess" hidden>Thanks — your message was sent.</p>
+            <p class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>Thanks — your message was sent.</p>
+            <p class="form-error" role="alert" hidden>Something blocked the send. Please email <a href="mailto:thetripquestapp@gmail.com">thetripquestapp@gmail.com</a> directly.</p>
           </form>
         </article>
       </div>
@@ -118,11 +120,11 @@
         <img src="assets/tripquest-icon.png" alt="TripQuest icon" />
         <span>TripQuest</span>
       </a>
-      <nav class="footer-nav">
+      <nav class="footer-nav" aria-label="Footer">
         <a href="https://thetripquestapp.com/">thetripquestapp.com</a>
         <a href="index.html">Home</a>
         <a href="support.html">Support</a>
-        <a href="feedback.html">Feedback</a>
+        <a href="feedback.html" aria-current="page">Feedback</a>
         <a href="submit-content.html">Submit Content</a>
         <a href="privacy.html">Privacy</a>
         <a href="release-notes.html">Release Notes</a>
