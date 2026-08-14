@@ -7,11 +7,11 @@ Static marketing website for TripQuest, a family-friendly iPhone game app for ro
 https://apps.apple.com/us/app/tripquest-travel-games/id6760669535
 
 Contact and feedback email: support@quiettoolsapps.com
-Feedback page: feedback.html
+Support page: support.html
 
-## Feedback form
+## Support and feedback form
 
-`feedback.html` posts to FormSubmit at `support@quiettoolsapps.com` so visitors can send feedback without opening their local email client. The feedback form sends messages to the TripQuest inbox.
+`support.html` posts to FormSubmit at `support@quiettoolsapps.com` so visitors can request help or send feedback without opening their local email client. The form sends messages to the TripQuest inbox.
 
 ## Icon
 

@@ -27,7 +27,6 @@
         <a href="index.html#games">Games</a>
         <a href="index.html#packs">Packs</a>
         <a href="support.html" aria-current="page">Support</a>
-        <a href="feedback.html">Feedback</a>
         <a href="submit-content.html">Submit Content</a>
         <a href="privacy.html">Privacy</a>
         <a href="release-notes.html">Release Notes</a>
@@ -50,8 +49,7 @@
         <article class="content-card glass-panel">
           <h2>Contact</h2>
           <p>Email: <a href="mailto:support@quiettoolsapps.com">support@quiettoolsapps.com</a></p>
-          <p>Use the feedback form for content ideas, corrections, pack requests, or general notes. You can also email directly any time.</p>
-          <p><a class="btn primary" href="feedback.html">Send feedback or content ideas</a></p>
+          <p>Use the form below for support, content ideas, corrections, pack requests, or general notes. You can also email directly any time.</p>
         </article>
 
         <article class="content-card glass-panel">
@@ -67,6 +65,75 @@
     </section>
 
     <section class="section alt-section">
+      <div class="wrap feedback-layout">
+        <article class="content-card glass-panel feedback-intro">
+          <h2>What you can send</h2>
+          <ul class="note-list">
+            <li>Support questions and bug reports</li>
+            <li>Corrections to questions, answers, or explanations</li>
+            <li>Ideas for new trivia, true or false, animal clues, or stories</li>
+            <li>Requests for future content packs</li>
+            <li>General feedback or things that felt confusing</li>
+          </ul>
+          <p class="small-note">This form sends directly to <a href="mailto:support@quiettoolsapps.com">support@quiettoolsapps.com</a>.</p>
+        </article>
+
+        <article class="content-card glass-panel">
+          <form class="feedback-form" id="feedbackForm" action="https://formsubmit.co/support@quiettoolsapps.com" method="POST">
+            <input type="hidden" name="_subject" value="New TripQuest feedback or support request" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="true" />
+            <input type="hidden" name="_autoresponse" value="We received your TripQuest support request. Thanks for reaching out — we’ll review it and reply as soon as we can." />
+            <input type="hidden" name="_next" value="https://www.thetripquestapp.com/support.html?sent=1" />
+
+            <label>
+              What is this about? <span class="required-label">required</span>
+              <select name="topic" required>
+                <option value="Support question">Support question</option>
+                <option value="General feedback">General feedback</option>
+                <option value="Question or content correction">Question or content correction</option>
+                <option value="New question or content idea">New question or content idea</option>
+                <option value="New pack request">New pack request</option>
+                <option value="Bug report">Bug report</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+
+            <div class="form-row">
+              <label>
+                Your name
+                <input name="name" type="text" autocomplete="name" placeholder="Optional" />
+              </label>
+              <label>
+                Your email
+                <input name="email" type="email" autocomplete="email" placeholder="Optional, if you want a reply" />
+              </label>
+            </div>
+
+            <label>
+              Pack, game mode, or screen
+              <input name="area" type="text" placeholder="Example: Space Trivia, Camping, Trip Mode" />
+            </label>
+
+            <label>
+              Your message <span class="required-label">required</span>
+              <textarea name="message" rows="8" required placeholder="Tell us how we can help or what should be fixed, added, or changed."></textarea>
+            </label>
+
+            <label>
+              Suggested wording or new content
+              <textarea name="suggestedContent" rows="5" placeholder="Optional: paste a question, answer, explanation, pack idea, or story prompt."></textarea>
+            </label>
+
+            <button class="btn primary large" type="submit">Send request</button>
+            <p class="form-help">This sends directly to the TripQuest support inbox.</p>
+            <p class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>Thanks — your message was sent.</p>
+          </form>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
       <div class="wrap">
         <article class="content-card glass-panel">
           <h2>App Store link</h2>
@@ -86,7 +153,6 @@
         <a href="https://thetripquestapp.com/">thetripquestapp.com</a>
         <a href="index.html">Home</a>
         <a href="support.html" aria-current="page">Support</a>
-        <a href="feedback.html">Feedback</a>
         <a href="submit-content.html">Submit Content</a>
         <a href="privacy.html">Privacy</a>
         <a href="release-notes.html">Release Notes</a>
