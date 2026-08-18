@@ -446,10 +446,13 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
 .support-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
 .content-card h2, .content-card h3 { margin: 0 0 12px; letter-spacing: -0.02em; }
 .content-card p { margin: 0; }
-.content-card p + p, .content-card p + h3, .content-card ul + h3 { margin-top: 14px; }
+.content-card p + p, .content-card p + h3, .content-card ul + h3, .content-card ul + p { margin-top: 14px; }
 .content-card ul { margin: 0; padding-left: 20px; }
 .content-card li + li { margin-top: 8px; }
 .release-entry + .release-entry, .content-card + .content-card { margin-top: 18px; }
+/* Stacked-card spacing must not offset side-by-side cards in grid layouts. */
+.support-grid > .content-card + .content-card,
+.feedback-layout > .content-card + .content-card { margin-top: 0; }
 .note-list, .release-list { color: var(--soft); line-height: 1.7; }
 
 @media (max-width: 1040px) {
