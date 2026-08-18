@@ -234,6 +234,17 @@ h1, h2, h3, p { overflow-wrap: anywhere; }
 }
 .btn.large { padding: 16px 22px; font-size: 1.02rem; }
 
+.app-badge-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 150ms ease, filter 150ms ease;
+}
+.app-badge-link:hover { transform: translateY(-1px); filter: brightness(1.08); }
+.app-badge-link img { display: block; height: 40px; width: auto; }
+.app-badge-link.large img { height: 54px; }
+.app-badge-link.nav-cta { width: auto; }
+
 .quick-badges, .perfect-grid {
   display: flex;
   flex-wrap: wrap;
