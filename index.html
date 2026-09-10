@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="TripQuest is a family-friendly road trip game app with trivia, true or false, animal clues, silly stories, and themed packs for families and friends." />
   <meta name="robots" content="index,follow" />
+  <meta name="theme-color" content="#1d90e8" />
   <meta property="og:title" content="TripQuest | Road Trip Games for Families and Friends" />
   <meta property="og:description" content="Turn the ride into the game with quick, read-aloud games for road trips, family travel, and nights with friends." />
   <meta property="og:type" content="website" />
@@ -17,19 +18,19 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preload" href="assets/fonts/nunito-latin-var.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body id="top">
   <a class="skip-link" href="#main">Skip to main content</a>
-  <div class="sky-noise" aria-hidden="true"></div>
-  <div class="orb orb-one" aria-hidden="true"></div>
-  <div class="orb orb-two" aria-hidden="true"></div>
-  <div class="orb orb-three" aria-hidden="true"></div>
 
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="TripQuest home">
-        <img src="assets/tripquest-icon.png" alt="TripQuest app icon" />
+        <picture>
+          <source srcset="assets/tripquest-icon.webp" type="image/webp" />
+          <img src="assets/tripquest-icon.png" alt="" width="42" height="42" />
+        </picture>
         <span>TripQuest</span>
       </a>
 
@@ -42,120 +43,123 @@
         <a href="#how-it-works">How it works</a>
         <a href="#packs">Packs</a>
         <a href="#screens">Screens</a>
-        <a href="privacy.html">Privacy</a>
         <a href="support.html">Support</a>
-        <a href="submit-content.html">Submit Content</a>
-        <a class="app-badge-link nav-cta" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener" aria-label="Download TripQuest on the App Store, opens in a new tab"><img src="assets/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40" /></a>
+        <a class="app-badge-link" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener" aria-label="Download TripQuest on the App Store, opens in a new tab"><img src="assets/app-store-badge-black.svg" alt="Download on the App Store" width="132" height="44" /></a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="hero section">
+
+    <!-- Illustrated window 1: hero -->
+    <section class="scene hero">
+      <img class="scene-clouds" src="assets/scenery/clouds.svg" alt="" aria-hidden="true" />
+      <img class="scene-art" src="assets/scenery/horizon.svg" alt="" aria-hidden="true" />
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <p class="eyebrow">Road trip games for the whole crew</p>
           <h1>Turn the ride into the game.</h1>
-          <p class="lead">TripQuest is made for the moments when everyone is in the car, the snacks are open, and someone asks, “How much longer?” Pick a pack, choose a game, and let the whole group play along.</p>
+          <p class="lead">Pick a pack, choose a game, and let the whole car play along — no board pieces, no rule book, no “how much longer?”</p>
 
           <div class="hero-actions">
-            <a class="app-badge-link large" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener" aria-label="Download TripQuest on the App Store, opens in a new tab"><img src="assets/app-store-badge-black.svg" alt="Download on the App Store" width="162" height="54" /></a>
-            <a class="btn ghost large" href="#how-it-works">See how it works</a>
+            <a class="app-badge-link large" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener" aria-label="Download TripQuest on the App Store, opens in a new tab"><img src="assets/app-store-badge-black.svg" alt="Download on the App Store" width="168" height="56" /></a>
+            <a class="btn on-scene large" href="#how-it-works">See how it works</a>
           </div>
 
-          <div class="quick-badges" aria-label="TripQuest highlights">
+          <div class="pill-row" aria-label="TripQuest highlights">
             <span>Built for road trips</span>
             <span>Played out loud</span>
             <span>Family friendly</span>
-            <span>Great with friends</span>
           </div>
         </div>
 
-        <div class="hero-phone-wrap" aria-label="TripQuest app preview">
-          <div class="phone-stack">
-            <div class="phone-card back-card">
-              <img src="assets/app-trip-trivia.png" alt="TripQuest trivia screen" />
-            </div>
-            <div class="phone-card front-card">
-              <img src="assets/app-home.png" alt="TripQuest home screen" />
-            </div>
+        <div class="phone-stack" aria-label="TripQuest app preview">
+          <div class="phone-card back-card">
+            <picture>
+              <source srcset="assets/app-trip-trivia.webp" type="image/webp" />
+              <img src="assets/app-trip-trivia.png" alt="TripQuest trivia screen" width="900" height="1957" />
+            </picture>
           </div>
-          <div class="floating-note note-one">Quick rounds</div>
-          <div class="floating-note note-two">Whole-car play</div>
+          <div class="phone-card front-card">
+            <picture>
+              <source srcset="assets/app-home.webp" type="image/webp" />
+              <img src="assets/app-home.png" alt="TripQuest home screen" width="900" height="1957" />
+            </picture>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section submit-callout-section">
-      <div class="wrap submit-callout glass-panel">
-        <div>
-          <p class="eyebrow">Help build a future pack</p>
-          <h2>Have a great road trip question?</h2>
-          <p>Send in your own Trivia, Would You Rather, True or False, Just for Fun, Backseat Story, or What Animal Am I idea. Approved submissions may be edited and considered for future TripQuest content, with optional first-name and last-initial credit.</p>
-        </div>
-        <a class="btn primary large" href="submit-content.html">Submit your content</a>
-      </div>
-    </section>
-
-    <section class="section compact-section">
-      <div class="wrap trust-panel glass-panel">
-        <div>
+    <!-- Trust -->
+    <section class="section">
+      <div class="wrap">
+        <header class="section-head centered">
           <p class="eyebrow">Made for real trips</p>
           <h2>For families on the road and friends around the table.</h2>
-        </div>
-        <p>TripQuest keeps the fun light, fast, and easy to share. It works for a long drive, a camping weekend, a vacation rental night, or any get-together that could use a little spark.</p>
+          <p>TripQuest keeps the fun light, fast, and easy to share. It works for a long drive, a camping weekend, a vacation rental night, or any get-together that could use a little spark.</p>
+        </header>
       </div>
     </section>
 
-    <section id="screens" class="section alt-section">
+    <!-- Screens — illustrations float on white, no cards -->
+    <section id="screens" class="section tight">
       <div class="wrap">
-        <header class="section-head">
+        <header class="section-head centered">
           <p class="eyebrow">App preview</p>
-          <h2>A playful app made for quick glances and easy choices.</h2>
-          <p>Large cards, clear prompts, and a bright adventure style help TripQuest feel at home on the road.</p>
+          <h2>Built for quick glances and easy choices.</h2>
         </header>
         <div class="screens-row">
-          <figure class="screenshot-card glass-panel">
-            <img src="assets/app-content-selector.png" alt="TripQuest content selector" />
+          <figure class="screenshot-card">
+            <picture>
+              <source srcset="assets/app-content-selector.webp" type="image/webp" />
+              <img src="assets/app-content-selector.png" alt="TripQuest content selector" width="900" height="1957" loading="lazy" />
+            </picture>
             <figcaption>Choose all content or a specific pack.</figcaption>
           </figure>
-          <figure class="screenshot-card glass-panel featured-shot">
-            <img src="assets/app-trip-trivia.png" alt="TripQuest Trip Mode trivia question" />
+          <figure class="screenshot-card featured-shot">
+            <picture>
+              <source srcset="assets/app-trip-trivia.webp" type="image/webp" />
+              <img src="assets/app-trip-trivia.png" alt="TripQuest Trip Mode trivia question" width="900" height="1957" loading="lazy" />
+            </picture>
             <figcaption>Play rounds together in Trip Mode.</figcaption>
           </figure>
-          <figure class="screenshot-card glass-panel">
-            <img src="assets/app-story-reveal.png" alt="TripQuest Backseat Stories reveal screen" />
+          <figure class="screenshot-card">
+            <picture>
+              <source srcset="assets/app-story-reveal.webp" type="image/webp" />
+              <img src="assets/app-story-reveal.png" alt="TripQuest Backseat Stories reveal screen" width="900" height="1957" loading="lazy" />
+            </picture>
             <figcaption>Reveal silly stories made by the group.</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <section id="how-it-works" class="section">
+    <!-- How it works -->
+    <section id="how-it-works" class="section wash-band">
       <div class="wrap">
-        <header class="section-head">
+        <header class="section-head centered">
           <p class="eyebrow">How it works</p>
           <h2>Start playing before the next exit.</h2>
           <p>No complicated setup. No board pieces. No long rule book. Just pick the content and go.</p>
         </header>
 
         <div class="steps-grid">
-          <article class="step-card glass-panel">
+          <article class="surface step-card">
             <span class="step-num">1</span>
             <h3>Pick a pack</h3>
-            <p>Start with Core or choose a theme like Camping, Food & Snacks, Zoo, or Space.</p>
+            <p>Start with Core or choose a theme like Camping, Food &amp; Snacks, Zoo, or Space.</p>
           </article>
-          <article class="step-card glass-panel">
+          <article class="surface step-card">
             <span class="step-num">2</span>
             <h3>Choose a game</h3>
             <p>Go quick with one mode or start Trip Mode when the whole group wants points and rounds.</p>
           </article>
-          <article class="step-card glass-panel">
+          <article class="surface step-card">
             <span class="step-num">3</span>
             <h3>Play out loud</h3>
             <p>Read a prompt, guess the answer, debate the choice, or reveal a ridiculous story.</p>
           </article>
-          <article class="step-card glass-panel">
+          <article class="surface step-card">
             <span class="step-num">4</span>
             <h3>Keep moving</h3>
             <p>Short rounds make it easy to stop, switch modes, and jump back in later.</p>
@@ -164,42 +168,43 @@
       </div>
     </section>
 
-    <section id="games" class="section alt-section">
+    <!-- Games -->
+    <section id="games" class="section">
       <div class="wrap">
-        <header class="section-head">
+        <header class="section-head centered">
           <p class="eyebrow">Game modes</p>
           <h2>Pick the mood in the car.</h2>
           <p>Some games are smart. Some are silly. Some make everyone argue about whether a penguin would be good at hide-and-seek. That’s the point.</p>
         </header>
 
         <div class="game-grid">
-          <article class="game-card glass-panel">
-            <span class="game-icon">?</span>
+          <article class="surface game-card">
+            <span class="game-icon" aria-hidden="true">?</span>
             <h3>Trivia</h3>
             <p>Quick questions with fun reveals, built to be read aloud and answered together.</p>
           </article>
-          <article class="game-card glass-panel">
-            <span class="game-icon">✓</span>
+          <article class="surface game-card">
+            <span class="game-icon" aria-hidden="true">✓</span>
             <h3>True or False</h3>
             <p>Fast facts where everyone can make a guess before the answer lands.</p>
           </article>
-          <article class="game-card glass-panel">
-            <span class="game-icon">🐾</span>
+          <article class="surface game-card">
+            <span class="game-icon" aria-hidden="true">🐾</span>
             <h3>What Animal Am I?</h3>
             <p>Guess the animal one clue at a time. The earlier you know it, the better.</p>
           </article>
-          <article class="game-card glass-panel">
-            <span class="game-icon">↔</span>
+          <article class="surface game-card">
+            <span class="game-icon" aria-hidden="true">↔</span>
             <h3>Would You Rather</h3>
             <p>Silly choices that start instant debates from the backseat to the front seat.</p>
           </article>
-          <article class="game-card glass-panel">
-            <span class="game-icon">✎</span>
+          <article class="surface game-card">
+            <span class="game-icon" aria-hidden="true">✎</span>
             <h3>Backseat Stories</h3>
             <p>Fill in words, reveal the story, and see how strange the ride gets.</p>
           </article>
-          <article class="game-card glass-panel">
-            <span class="game-icon">★</span>
+          <article class="surface game-card">
+            <span class="game-icon" aria-hidden="true">★</span>
             <h3>Trip Mode</h3>
             <p>Bring the group together with rounds, points, and a leaderboard for the ride.</p>
           </article>
@@ -207,9 +212,13 @@
       </div>
     </section>
 
-    <section class="section trip-mode-section">
-      <div class="wrap trip-mode-panel glass-panel">
-        <div class="trip-copy">
+    <img class="divider" src="assets/scenery/divider.svg" alt="" aria-hidden="true" />
+
+    <!-- Illustrated window 2: Trip Mode -->
+    <section class="scene section">
+      <img class="scene-art" src="assets/scenery/horizon.svg" alt="" aria-hidden="true" />
+      <div class="wrap split">
+        <div>
           <p class="eyebrow">Featured mode</p>
           <h2>Trip Mode makes the whole ride feel like one big game.</h2>
           <p>Choose your content, set up players, and keep the trip moving with quick rounds. It is built for group play without making the phone the center of everything.</p>
@@ -219,30 +228,49 @@
             <li>Keeps score without slowing down the trip</li>
           </ul>
         </div>
-        <div class="trip-preview">
-          <img src="assets/app-trip-setup.png" alt="TripQuest Trip Mode setup screen" />
+        <div class="split-media">
+          <picture>
+            <source srcset="assets/app-trip-setup.webp" type="image/webp" />
+            <img src="assets/app-trip-setup.png" alt="TripQuest Trip Mode setup screen" width="900" height="1957" loading="lazy" />
+          </picture>
         </div>
       </div>
     </section>
 
+    <!-- Packs -->
     <section id="packs" class="section">
-      <div class="wrap packs-layout">
+      <div class="wrap split">
         <div>
           <p class="eyebrow">Content packs</p>
-          <h2>Start with Core. Add packs for the kind of trip you’re taking.</h2>
-          <p class="section-lead">TripQuest begins with free starter content, then expands with themes that fit the moment. Keep it familiar, or switch to a pack that matches the destination, the mood, or the people in the car.</p>
+          <h2 class="display-head">Start with Core. Add packs for the kind of trip you’re taking.</h2>
+          <p class="section-lead">TripQuest begins with free starter content, then expands with themes that fit the moment — the destination, the mood, or the people in the car.</p>
         </div>
-        <div class="pack-list glass-panel">
+        <div class="pack-list">
           <article><strong>Core</strong><span>Free starter content</span></article>
           <article><strong>Camping</strong><span>Trails, tents, campfires, and outdoor laughs</span></article>
-          <article><strong>Food & Snacks</strong><span>Road-trip bites, treats, and tasty debates</span></article>
+          <article><strong>Food &amp; Snacks</strong><span>Road-trip bites, treats, and tasty debates</span></article>
           <article><strong>Zoo</strong><span>Animals, habitats, and wild fun</span></article>
           <article><strong>Space</strong><span>Planets, stars, rockets, and imagination</span></article>
         </div>
       </div>
     </section>
 
-    <section class="section perfect-section">
+    <!-- Submit callout -->
+    <section class="section tight wash-band">
+      <div class="wrap">
+        <div class="callout">
+          <div>
+            <p class="eyebrow">Help build a future pack</p>
+            <h2>Have a great road trip question?</h2>
+            <p>Send in your own Trivia, Would You Rather, True or False, Just for Fun, Backseat Story, or What Animal Am I idea. Approved submissions may be edited and considered for future TripQuest content, with optional first-name and last-initial credit.</p>
+          </div>
+          <a class="btn primary large" href="submit-content.html">Submit your content</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Perfect for -->
+    <section class="section tight">
       <div class="wrap">
         <header class="section-head centered">
           <p class="eyebrow">Perfect for</p>
@@ -259,27 +287,28 @@
       </div>
     </section>
 
-    <section id="faq" class="section alt-section">
-      <div class="wrap faq-layout">
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="wrap split">
         <div>
           <p class="eyebrow">FAQ</p>
-          <h2>Before the next drive.</h2>
-          <p class="section-lead">A few quick answers before the next drive.</p>
+          <h2 class="display-head">Before the next drive.</h2>
+          <p class="section-lead">A few quick answers before you pull out of the driveway.</p>
         </div>
         <div class="faq-list">
-          <details class="faq-item glass-panel" open>
+          <details class="surface faq-item no-hover" open>
             <summary>What is TripQuest?</summary>
             <p>TripQuest is a family-friendly iPhone game app for road trips, group play, and casual get-togethers.</p>
           </details>
-          <details class="faq-item glass-panel">
+          <details class="surface faq-item no-hover">
             <summary>Is TripQuest only trivia?</summary>
             <p>No. TripQuest includes trivia, true or false, animal clues, would-you-rather choices, silly stories, and Trip Mode.</p>
           </details>
-          <details class="faq-item glass-panel">
+          <details class="surface faq-item no-hover">
             <summary>Who is it for?</summary>
             <p>Families, kids, parents, grandparents, friends, carpools, camping groups, and anyone who wants a shared game that is easy to start.</p>
           </details>
-          <details class="faq-item glass-panel">
+          <details class="surface faq-item no-hover">
             <summary>Where will I find it?</summary>
             <p>The site is thetripquestapp.com. You can download TripQuest from the App Store.</p>
           </details>
@@ -287,24 +316,32 @@
       </div>
     </section>
 
-    <section class="section final-cta">
-      <div class="wrap cta-panel glass-panel">
+    <img class="divider" src="assets/scenery/divider.svg" alt="" aria-hidden="true" />
+
+    <!-- Illustrated window 3: final CTA -->
+    <section class="scene section">
+      <img class="scene-art" src="assets/scenery/horizon.svg" alt="" aria-hidden="true" />
+      <div class="wrap" style="text-align:center">
         <p class="eyebrow">Ready for the next trip?</p>
-        <h2>Make the miles more fun.</h2>
-        <p>Download TripQuest from the App Store, then pick a pack and start playing on your next drive.</p>
+        <h2 class="display-head">Make the miles more fun.</h2>
+        <p class="lead" style="margin-inline:auto">Download TripQuest from the App Store, then pick a pack and start playing on your next drive.</p>
         <div class="hero-actions centered-actions">
-          <a class="app-badge-link large" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener" aria-label="Download TripQuest on the App Store, opens in a new tab"><img src="assets/app-store-badge-black.svg" alt="Download on the App Store" width="162" height="54" /></a>
-          <a class="btn ghost large" href="support.html">Support</a>
+          <a class="app-badge-link large" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener" aria-label="Download TripQuest on the App Store, opens in a new tab"><img src="assets/app-store-badge-black.svg" alt="Download on the App Store" width="168" height="56" /></a>
+          <a class="btn on-scene large" href="support.html">Support</a>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
+    <img class="footer-motif" src="assets/scenery/route.svg" alt="" aria-hidden="true" />
     <div class="wrap footer-inner">
       <div>
         <a class="brand footer-brand" href="#top">
-          <img src="assets/tripquest-icon.png" alt="TripQuest app icon" />
+          <picture>
+            <source srcset="assets/tripquest-icon.webp" type="image/webp" />
+            <img src="assets/tripquest-icon.png" alt="" width="42" height="42" />
+          </picture>
           <span>TripQuest</span>
         </a>
         <p class="footer-copy">Family-friendly games for road trips, travel days, and friend nights.</p>

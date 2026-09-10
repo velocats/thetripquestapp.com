@@ -5,6 +5,7 @@
   <title>TripQuest Release Notes | thetripquestapp.com</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="Latest TripQuest release notes and app updates." />
+  <meta name="theme-color" content="#1d90e8" />
   <meta name="robots" content="index,follow" />
   <meta property="og:title" content="TripQuest Release Notes" />
   <meta property="og:description" content="Latest TripQuest release notes and app updates." />
@@ -17,11 +18,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preload" href="assets/fonts/nunito-latin-var.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <div class="sky-noise" aria-hidden="true"></div>
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="index.html">
@@ -29,21 +30,20 @@
         <span>TripQuest</span>
       </a>
       <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="siteNav" aria-label="Open navigation"><span></span><span></span><span></span></button>
-      <nav class="nav" id="siteNav" aria-label="Primary">
-        <a href="index.html">Home</a>
+            <nav class="nav" id="siteNav" aria-label="Primary">
         <a href="index.html#games">Games</a>
+        <a href="index.html#how-it-works">How it works</a>
         <a href="index.html#packs">Packs</a>
         <a href="support.html">Support</a>
         <a href="submit-content.html">Submit Content</a>
-        <a href="release-notes.html" aria-current="page">Release Notes</a>
-        <a href="privacy.html">Privacy</a>
-        <a class="app-badge-link nav-cta" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener" aria-label="Download TripQuest on the App Store, opens in a new tab"><img src="assets/app-store-badge-black.svg" alt="Download on the App Store" width="120" height="40" /></a>
+        <a class="app-badge-link" href="https://apps.apple.com/us/app/tripquest-travel-games/id6760669535" target="_blank" rel="noopener" aria-label="Download TripQuest on the App Store, opens in a new tab"><img src="assets/app-store-badge-black.svg" alt="Download on the App Store" width="132" height="44" /></a>
       </nav>
     </div>
   </header>
 
   <main id="main">
-    <section class="page-hero small-hero section">
+    <section class="scene page-hero">
+      <img class="scene-art" src="assets/scenery/horizon.svg" alt="" aria-hidden="true" />
       <div class="wrap">
         <p class="eyebrow">Release Notes</p>
         <h1>What’s new in TripQuest</h1>
@@ -53,7 +53,7 @@
 
     <section class="section">
       <div class="wrap">
-        <article class="content-card glass-panel release-entry" aria-labelledby="release-history-title">
+        <article class="content-card surface release-entry" aria-labelledby="release-history-title">
           <h2 id="release-history-title">Release history</h2>
           <ul class="release-list">
             <li><a href="#version-1-2-2">Version 1.2.2</a></li>
@@ -63,7 +63,7 @@
           </ul>
         </article>
 
-        <article class="content-card glass-panel release-entry" id="version-1-2-2">
+        <article class="content-card surface release-entry" id="version-1-2-2">
           <h2>Version 1.2.2</h2>
           <p class="small-note">Pack browser and Trip Mode update</p>
           <p>TripQuest 1.2.2 makes the pack browser easier to explore and adds more variety to Trip Mode.</p>
@@ -89,7 +89,7 @@
           </ul>
         </article>
 
-        <article class="content-card glass-panel release-entry" id="version-1-1-1">
+        <article class="content-card surface release-entry" id="version-1-1-1">
           <h2>Version 1.1.1</h2>
           <p class="small-note">Narrator update</p>
           <p>TripQuest 1.1.1 adds a built-in narrator that reads questions, prompts, clues, and stories aloud — entirely offline, no internet required. This makes it easier for the driver or a front-seat player to manage the game hands-free while everyone listens.</p>
@@ -104,7 +104,7 @@
           </ul>
         </article>
 
-        <article class="content-card glass-panel release-entry" id="version-1-1">
+        <article class="content-card surface release-entry" id="version-1-1">
           <h2>Version 1.1</h2>
           <p class="small-note">Community Content update</p>
           <p>TripQuest 1.1 adds a new way for players to help shape the game. This update introduces the free <strong>Community Content</strong> pack, where selected player-submitted questions, prompts, clues, and stories may appear in future updates.</p>
@@ -112,7 +112,7 @@
           <p>We also cleaned up pack naming, improved content labeling, and made small updates across the app and website to better support future community-created content.</p>
         </article>
 
-        <article class="content-card glass-panel release-entry" id="version-1-0">
+        <article class="content-card surface release-entry" id="version-1-0">
           <h2>Version 1.0</h2>
           <p class="small-note">Initial App Store release</p>
           <ul class="release-list">
@@ -124,7 +124,7 @@
           </ul>
         </article>
 
-        <article class="content-card glass-panel release-entry" id="coming-next">
+        <article class="content-card surface release-entry" id="coming-next">
           <h2>Coming next</h2>
           <p>Future updates may include bug fixes, content updates, new packs, and gameplay improvements based on player feedback.</p>
         </article>
@@ -133,6 +133,7 @@
   </main>
 
   <footer class="site-footer">
+    <img class="footer-motif" src="assets/scenery/route.svg" alt="" aria-hidden="true" />
     <div class="wrap footer-inner">
       <a class="brand footer-brand" href="index.html">
         <img src="assets/tripquest-icon.png" alt="TripQuest icon" />
